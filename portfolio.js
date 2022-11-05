@@ -8,7 +8,7 @@ function closeForm() {
 }
 
 //function to display the first image in the slideshow when the page loads
-var slideshow = 1;
+var slideIndex = 1;
 showSlides(slideIndex);
 
 //function changes the slide when the arrows are clicked
