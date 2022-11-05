@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width"/>
         <title>Kai Wilder</title>
+        <link rel="shortcut icon" type="img/jpg" href=""> 
         <link rel="stylesheet" type="text/css" href="portfolio.css">
     </head>
     <!--Body-->
@@ -12,11 +13,14 @@
         <!--Navbar-->
         <div class="Navbar">
             <a class="active" href="#Home">Home</a>
+            <!--New section-->
+            <a href="#Slideshow">Slideshow</a>
             <a href="#About">About</a>
             <a href="#GitHub">GitHub</a>
-            <a href="#Contact">Contact</a>
+            <!--Onclick and ondblclick added to open and close the contact form-->
+            <a onclick="openForm()" ondblclick="closeForm()" class="contact">Contact</a>
         </div>
-
+<!--adding a comment to recommmit-->
         <!--Breaks inserted to add space between navbar and the first heading-->
         <br>
         <br>
@@ -50,11 +54,63 @@
             </strong>
         </div>
 
+        <!--Slideshow sectioon added-->
+        <div id="Slideshow">
+            <div id="Slideshow_Background">
+                <div id="Slideshow_Container">
+                    <!--Slide 1 of 6-->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="myself.jpg" alt="A picture of me!">
+                        <div class="text">I am available to assist you on your project!</div>
+                    </div>
+                    <!--Slide 2 of 6-->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="HTML_CSS_and_JavaScript.jpeg" alt="HTML CSS and JS logos">
+                        <div class="text">I am trained in HTML, CSS, and JavaScript,</div>
+                    </div>
+                    <!--Slide 3 of 6-->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="Python.png" alt="Python Logo">
+                        <div class="text">some Python training,</div>
+                    </div>
+                    <!--Slide 4 of 6-->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="C_Sharp_and_Dot_NET.png" alt="C# and .NET Logo">
+                        <div class="text">C#, .NET Framework,</div>
+                    </div>
+                    <!--Slide 5 of 6-->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="SQL_and_Database.jpg" alt="SQL Logo">
+                        <div class="text">databases and SQL.</div>
+                    </div>
+                    <!--Slide 6 of 6-->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="Contact_square.jpg" alt="People working o a project">
+                        <div class="text"><a class="white-text contact" onclick="openForm()">Contact me Now!</a></div>
+                    </div>
+                    <!--previous and next buttons-->
+                    <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br><!--Adds a space between the slideshow images and the dots-->
+
+                <!--Slideshow dots (another way to navigate the slideshow)-->
+                <div style="text-align: center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+                </div>
+            </div>
+        </div>
+
         <!--About Section-->
         <div class="Row" id="About">
             <!--Left column-->
             <div class="Column_2">
-                <img src="Laptop.jpg" alt="A Laptop on a table with a coffe">
+                <img src="Laptop.jpg" alt="A Laptop on a table with a coffee">
             </div>
             <!--Right Column-->
             <div class="Column_1">
@@ -63,11 +119,10 @@
                     I am an aspiring software developer who enjoys coding! I spend my free time with my partner and our pets,
                      and I love video games.
                         <br>
-                        <br>I am currently studying several coding languages through <a href="https://www.learncodinganywhere.com/"
-            target="_blank">The Tech Academy</a>'s C# Boot Camp, such as HTML, and CSS, and I will be learning more in the coming months.
+                        <br>I am currently studying several coding languages through <a href="https://www.learncodinganywhere.com/"target="_blank">
+                            The Tech Academy</a>'s C# Boot Camp, such as HTML, and CSS, and I will be learning more in the coming months.
                         <br>
-                        <br>I aspire to work in game development, and I'd love to work on your project. 
-            <a href="#Contact">Contact</a> me below!
+                        <br>I aspire to work in game development, and I'd love to work on your project. <a href="#Contact">Contact</a> me below!
                 </p>
             </div>
         </div>
@@ -90,28 +145,30 @@
         </div>
 
     <!--Contact Section-->
-        <div class="Row" id="Contact">
-            <!--Contact image, left column-->
-            <div class="Column_2 Column_tall">
-                <img src="Contact.jpg" alt="A Meeting">
-            </div>
-            <!--Contact form, right column-->
-            <div class="Column_1 Column_tall">
+        <div id="Contact">
+            <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+            <div class="form-popup" id="myForm">
                 <h1>Contact</h1>
-                <form action="https://formspree.io/f/meqdzpky" method="POST">
-                    <label>Name:</label>
-                        <input type="text" placeholder="Please enter your name here">
-                    <label>Email:</label>
-                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
-                    <label>Message:</label>
-                        <input type="text" id="Message" name="Message" placeholder="Please write your message here">
-                        <input type="submit" value="SUBMIT">
+                <form action="https://formspree.io/f/meqdzpky" method="POST" class="form-container">
+                    <label for="name"><b>Name</b></label>
+                      <input type="text" placeholder="Please enter your name here" name="name" required>
+                    <label for="phone"><b>Phone</b></label>
+                      <input type="text" placeholder="Please enter your phone number here" name="phone">
+                    <label for="email"><b>Email</b></label>
+                      <input type="text" placeholder="Please enter your email here" name="email" required>
+                    <label for="message"><b>Message</b></label>
+                     <input type="text" placeholder="Please write your message here" name="message">
+                        
+                     <button type="submit" class="btn">SUBMIT</button>
+                     <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
                 </form>
             </div>
         </div>
         <!--Do I Need A Footer Section?-->
+        <!--Update: yes I do to position the contact form nicely at the bottom-->
         <footer>
-
+            <p class="center">Updated November 5, 2022</p><br>
         </footer>
+        <script src="portfolio.js"></script>
     </body>
 </html>
