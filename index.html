@@ -21,9 +21,6 @@
             <a onclick="openForm()" ondblclick="closeForm()" class="contact">Contact</a>
         </div>
 
-        <!--Breaks inserted to add space between navbar and the first heading-->
-        <br>
-        <br>
 
         <!--Background video-->
         <div id="Home">
@@ -60,7 +57,7 @@
                 <div id="Slideshow_Container">
                     <!--Slide 1 of 6-->
                     <div class="mySlides fade">
-                        <img class="Slideshow_Images" src="myself.jpg" alt="A picture of me!">
+                        <img class="Slideshow_Images" src="Me.jpg" alt="A picture of me!">
                         <div class="text">I am available to assist you on your project!</div>
                     </div>
                     <!--Slide 2 of 6-->
@@ -103,14 +100,15 @@
                     <span class="dot" onclick="currentSlide(5)"></span>
                     <span class="dot" onclick="currentSlide(6)"></span>
                 </div>
+                <br>
             </div>
         </div>
 
         <!--About Section-->
         <div class="Row" id="About">
             <!--Left column-->
-            <div class="Column_2">
-                <img src="Laptop.jpg" alt="A Laptop on a table with a coffee">
+            <div class="Column_2 ">
+                <img class="laptop" src="Laptop.jpg" alt="A Laptop on a table with a coffee">
             </div>
             <!--Right Column-->
             <div class="Column_1">
@@ -120,7 +118,7 @@
                      and I love video games.
                         <br>
                         <br>I have studied several coding languages through <a href="https://www.learncodinganywhere.com/"target="_blank">
-                            The Tech Academy's</a> C# Boot Camp, such as HTML, CSS, JavaScript, C#, and the .NET framework.
+                            The Tech Academy's</a> C# Boot Camp, such as HTML, CSS, JavaScript, C#, and SQL.
                         <br>
                         <br>I aspire to work in game development, and I'd love to work on your project. Click the <a href="#Contact">Contact</a> button below!
                 </p>
@@ -133,14 +131,22 @@
             <div class="Column_1">
                 <h1>GitHub</h1>
                 <p>
-                    You can view my coding projects at my GitHib profile here:
-                    <br>
+                    You can view my coding projects at my GitHib profile here:<br>
                     <p class="center"><a href="https://github.com/kaiwilder" target="_blank">My GitHub</a></p>
+                </p>
+                <p>
+                    My LinkedIn Profile here:
+                    <p class="center"><a href="https://www.linkedin.com/in/kai-wilder/" target="_blank">My LinkedIn</a></p>
+                </p>
+                <p>
+                    And My Resume here:
+                    <p class="center" id="resume"><a href="https://docs.google.com/document/d/1pbFGafnNg8NAYIpNtXVttmqFvudxpZrhX0gbiLoItqw/edit?usp=sharing" target="blank">My Resume</a></p>
+                    <br>
                 </p>
             </div>
             <!--Right Column-->
             <div class="Column_2">
-                <a href="https://github.com/kaiwilder" target="_blank"><img src="GitHub.png" alt="GitHub Logo"></a>
+                <a href="https://github.com/kaiwilder" target="_blank"><img class="gitpic" src="GitHub.png" alt="GitHub Logo"></a>
             </div>
         </div>
 
@@ -167,7 +173,7 @@
         <!--Do I Need A Footer Section?-->
         <!--Update: yes I do to position the contact form nicely at the bottom-->
         <footer>
-            <p class="center">Updated February 7, 2023</p><br>
+            <p class="center">Updated February 9, 2023</p><br>
         </footer>
         <script src="portfolio.js"></script>
     </body>

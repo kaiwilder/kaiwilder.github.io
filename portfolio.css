@@ -58,7 +58,7 @@ p:hover {
     transition: transform 1s; /*makes transform effect last 1 second*/
     transform: scale(1.01); /*makes paragragh size increase slightly when hovered over*/
 }
- /* Center class- applies to all centerd text*/
+ /* Center class- applies to all centered text*/
 .center {
     text-align: center;
 }
@@ -84,7 +84,7 @@ img {
     max-width: 100%; /*ensures images stay within the width of their containers */
     height: 340px; 
     display: block; /*ensures images are able to be centered*/
-    margin: auto auto auto auto;
+    margin: auto;
 }
 
 img:hover {
@@ -171,7 +171,7 @@ footer{
     background: rgba(0, 0, 0, 0.5); /*provides a a semi-transparetn background for the text to sit over*/
     color: white;
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     padding-top: 2vw;
     position: relative;
     -webkit-animation: moveVideoText 5.75s;
@@ -304,6 +304,7 @@ footer{
     float: left;
     width: 50%;
     padding: 1.6%;
+    /* padding-bottom: 5%; */
     height: 450px;
     background-color: #f2f2f2;
 }
@@ -312,6 +313,7 @@ footer{
     float: left;
     width: 50%;
     padding: 1.6%;
+    padding-top: 4%;
     height: 450px;
     background-color: #2c442c;
 }
